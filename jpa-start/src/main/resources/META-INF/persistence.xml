@@ -11,10 +11,12 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/test"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             
-            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.show_sql" value="true"/> <!-- 콘솔에 실행되는 테이블 생성 DDL 출력 -->
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
-            <property name="hibernate.id.new_generator_mappings" value="true"/>
+            <property name="hibernate.id.new_generator_mappings" value="true"/> <!-- 키 생성 전략 -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/> <!-- 실행 시점에 데이터베이스 테이블 자동으로 생성 -->
+            <property name="hibernate.physical_naming_strategy" value="com.jpabook.start.CustomPhysicalNamingStrategy"/>
         </properties>
     </persistence-unit>
 </persistence>
