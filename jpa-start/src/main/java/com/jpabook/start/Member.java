@@ -33,6 +33,7 @@ public class Member {
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdDate;
 
+
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastModifiedDate;
 
