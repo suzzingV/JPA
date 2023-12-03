@@ -15,10 +15,9 @@ public class Member extends BaseEntity {
     @Id @GeneratedValue //데이터베이스에서 식별자 자동생성
     @Column(name = "MEMBER_ID")
     private Long id;
-    
-    private String city;
-    private String street;
-    private String zipcode;
+
+    @Embedded
+    private Address address;
 
     @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
